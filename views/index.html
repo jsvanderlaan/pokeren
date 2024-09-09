@@ -1,0 +1,27 @@
+{{ block "index" .}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/htmx.org@2.0.2" integrity="sha384-Y7hw+L/jvKeWIRRkqWYfPcvVxHzVzn5REgzbawhxAuQGwX1XWe70vji+VSeHOThJ" crossorigin="anonymous"></script>
+    <title>Pokeren</title>
+  </head>
+  <body>
+    {{if .Login}}
+    {{ template "login" . }}
+    {{else}}
+    {{template "main" .}}
+    {{end}}
+  </body>
+</html>
+{{ end }}
+
+{{block "login" .}}
+<input></input>
+<button hx-post="login">Login</button>
+{{end}}
+
+{{block "main" .}}
+hello world
+{{end}}
