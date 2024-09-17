@@ -1,0 +1,19 @@
+*/.*
+
+# Angular / NPM files
+package.json
+package-lock.json
+
+**/.husky/**
+**/node_modules/**
+dist/**
+**/fonts/**
+
+# Images
+*.ico
+
+# Config files with ad3 syntax
+config.tpl.json
+
+# Feature files
+*.feature

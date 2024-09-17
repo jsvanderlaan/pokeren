@@ -1,0 +1,39 @@
+{
+    "arrowParens": "avoid",
+    "bracketSpacing": true,
+    "printWidth": 140,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 4,
+    "useTabs": false,
+    "quoteProps": "as-needed",
+    "jsxSingleQuote": false,
+    "trailingComma": "none",
+    "jsxBracketSameLine": false,
+    "overrides": [
+        {
+            "files": "*.html",
+            "options": {
+                "parser": "html"
+            }
+        },
+        {
+            "files": "*.component.html",
+            "options": {
+                "parser": "angular"
+            }
+        },
+        {
+            "files": "*.json",
+            "options": {
+                "parser": "json"
+            }
+        },
+        {
+            "files": "*.scss",
+            "options": {
+                "parser": "scss"
+            }
+        }
+    ]
+}

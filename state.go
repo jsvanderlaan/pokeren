@@ -1,23 +1,15 @@
 package main
 
-import (
-	"sync"
-	"time"
-)
-
 type (
-	ServerState struct {
-		Users map[string]User
-		mutex sync.RWMutex
-	}
-	User struct {
-		LastPoll time.Time
-		Name     string
+	State struct {
+		users   UserState
+		clients ClientState
 	}
 )
 
-func NewState() *ServerState {
-	return &ServerState{
-		Users: map[string]User{},
+func NewState() *State {
+	return &State{
+		users:   *NewUserState(),
+		clients: *NewClientState(),
 	}
 }

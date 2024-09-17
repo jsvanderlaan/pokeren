@@ -1,0 +1,9 @@
+{{ block "login" .}}
+<div hx-swap-oob="innerHTML:body">
+    <form hx-post="/login">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+        <button type="submit">Login</button>
+    </form>
+</div>
+{{ end }}

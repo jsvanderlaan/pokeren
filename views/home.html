@@ -1,0 +1,16 @@
+{{ block "home" . }}
+<div hx-swap-oob="innerHTML:body">
+    <h1>Welcome {{.username}}</h1>
+    <!-- {{.guid}} -->
+    <a hx-get="logout" href="">logout</a>
+
+    <!-- <div hx-get="/poll" hx-trigger="load, every 10s" hx-swap="innerHTML">Loading...</div> -->
+<p>
+    <div hx-ext="sse" sse-connect="/events">
+        <div>Users</div>
+        <div sse-swap="message" hx-swap="beforeend"></div>
+        <div>Clients</div>
+        <div sse-swap="test" hx-swap="beforeend"></div>
+    </div></p>
+</div>
+{{ end }}
